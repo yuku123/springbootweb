@@ -1,0 +1,25 @@
+div#authorization_box,div#auth_confirm {
+    marguin:0 auto;
+    overflow:hidden;
+}
+
+body {background-color: #ded380;}
+
+#wrap {
+    text-align:center;
+    border: 25px solid green;
+    position:fixed;
+    z-index:9999;
+    top:50%;
+    left:50%;
+    width:250px; /* 按需改变数值 */
+    height:150px; /* 按需改变数值 */
+    margin-top:-75px; /* height数值的一半 */
+    margin-left:-125px; /* width数值的一半 */
+    box-shadow:0 0 3px rgba(0,0,0,.2);
+    background:#fff;
+    padding:10px;
+
+    -webkit-box-shadow:0 0 3px rgba(0, 0, 0, 0.85);
+    -moz-box-shadow:0 0 3px rgba(0,0,0,.2);
+}
