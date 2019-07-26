@@ -1,7 +1,7 @@
 /**
  * 2015-2016 龙果学院 (www.roncoo.com)
  */
-package com.zifang.springboot.web.bean;
+package com.zifang.springboot.web.test;
 
 import java.util.Date;
 

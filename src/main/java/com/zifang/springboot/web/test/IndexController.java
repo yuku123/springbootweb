@@ -1,9 +1,8 @@
 /**
  * 2015-2016 龙果学院 (www.roncoo.com)
  */
-package com.zifang.springboot.web.restful;
+package com.zifang.springboot.web.test;
 
-import com.zifang.springboot.web.bean.User;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
