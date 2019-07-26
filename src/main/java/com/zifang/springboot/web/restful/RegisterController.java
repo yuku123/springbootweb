@@ -12,7 +12,7 @@ public class RegisterController {
     @Autowired
     private UserRepository userRepository;
 
-    @GetMapping(name = "/test_db")
+    @GetMapping("/test_db")
     public User t(@RequestParam(value = "userName") String userName){
         User user = userRepository.findByName(userName);
         return user;

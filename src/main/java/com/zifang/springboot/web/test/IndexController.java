@@ -12,11 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Date;
 import java.util.HashMap;
 
-/**
- * spring-boot-demo-2-1
- * 
- * @author wujing
- */
 @RestController
 @RequestMapping(value = "/test_restful")
 public class IndexController {

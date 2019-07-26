@@ -11,6 +11,4 @@ public class SystemController {
     public String index(Model model) {
         return "index";
     }
-
-
 }
