@@ -9,12 +9,5 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class RegisterController {
-    @Autowired
-    private UserRepository userRepository;
 
-    @GetMapping("/test_db")
-    public User t(@RequestParam(value = "userName") String userName){
-        User user = userRepository.findByName(userName);
-        return user;
-    }
 }

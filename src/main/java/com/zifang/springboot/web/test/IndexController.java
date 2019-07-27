@@ -3,11 +3,10 @@
  */
 package com.zifang.springboot.web.test;
 
+import com.zifang.springboot.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -24,6 +23,15 @@ public class IndexController {
 
 	@Value(value = "${roncoo.desc}")
 	private String desc;
+
+	@Autowired
+	private UserRepository userRepository;
+
+	@GetMapping("/test_db")
+	public com.zifang.springboot.entity.User t(@RequestParam(value = "userName") String userName){
+		com.zifang.springboot.entity.User user = userRepository.findByName(userName);
+		return user;
+	}
 
 	// @RequestParam 简单类型的绑定，可以出来get和post
 	@RequestMapping(value = "/get")
