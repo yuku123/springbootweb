@@ -1,0 +1,44 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta http-equiv="Content-language" content="zh-CN"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="applicable-device" content="pc">
+
+    <title>主界面</title>
+    <meta name="description" content="整合所有资源"/>
+    <meta name="keywords" content="寻屋"/>
+    <link href="/static/lib/layui/layui.css" rel='stylesheet' type='text/css'/>
+    <link href="/static/css/module/tree.css" rel='stylesheet' type='text/css'/>
+
+</head>
+<body>
+
+<button id="buttons">ddd</button>
+
+<div id="page1">
+
+</div>
+
+<script type="text/javascript" src="/static/lib/layui/layui.js"></script>
+<script type="text/javascript" src="/static/lib/jquery/1.9.1/jquery.min.js"></script>
+<script>
+    //注意：导航 依赖 element 模块，否则无法进行功能性操作
+    layui.use('element', function(){
+        var element = layui.element;
+
+        //…
+    });
+</script>
+
+<script>
+    window.onload=function () {
+        document.getElementById("buttons").addEventListener("click",function (ev) { $("#page1").load("/static/module/crm/tree.html") },true)
+    }
+</script>
+</body>
+</html>
+
