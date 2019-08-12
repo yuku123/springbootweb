@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Date;
 import java.util.HashMap;
 
+import com.zifang.springboot.entity.User;
+
 @RestController
 @RequestMapping(value = "/test_restful")
 public class IndexController {
@@ -28,8 +30,8 @@ public class IndexController {
 	private UserRepository userRepository;
 
 	@GetMapping("/test_db")
-	public com.zifang.springboot.entity.User t(@RequestParam(value = "userName") String userName){
-		com.zifang.springboot.entity.User user = userRepository.findByName(userName);
+	public User t(@RequestParam(value = "userName") String userName){
+		User user = userRepository.findByName(userName);
 		return user;
 	}
 
@@ -49,9 +51,7 @@ public class IndexController {
 	@RequestMapping(value = "/get/{id}/{name}")
 	public User getUser(@PathVariable int id, @PathVariable String name) {
 		User user = new User();
-		user.setId(id);
-		user.setName(name);
-		user.setDate(new Date());
+		user.setEmail("1340947819@qq.com");
 		return user;
 	}
 
