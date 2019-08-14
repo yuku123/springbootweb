@@ -17,8 +17,6 @@
 </head>
 <body>
 
-<button id="buttons">ddd</button>
-
 <div id="page1">
 
 </div>
@@ -29,12 +27,7 @@
     layui.use('element', function(){
         var element = layui.element;
     });
-</script>
-
-<script>
-    window.onload=function () {
-        document.getElementById("buttons").addEventListener("click",function (ev) { $("#page1").load("/static/module/crm/tree.html") },true)
-    }
+    $("#page1").load("/static/module/crm/tree.html")
 </script>
 </body>
 </html>
